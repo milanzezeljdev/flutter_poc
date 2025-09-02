@@ -1,0 +1,8 @@
+{
+    "generic": "Oops! Something went wrong",
+    "canceled": "Request was canceled",
+    "noInternet": "Not connected to the internet",
+    "invalid_request": "Request is invalid",
+    "invalid_grant": "Invalid grant",
+    "unknown_error": "Server error"
+}
