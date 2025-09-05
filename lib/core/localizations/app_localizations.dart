@@ -93,6 +93,12 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[Locale('en')];
+
+  /// No description provided for @noAvailableTasks.
+  ///
+  /// In en, this message translates to:
+  /// **'There are no available tasks :('**
+  String get noAvailableTasks;
 }
 
 class _AppLocalizationsDelegate

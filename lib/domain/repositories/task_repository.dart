@@ -4,4 +4,8 @@ import 'package:fpdart/fpdart.dart';
 
 abstract interface class TaskRepository {
   TaskEither<Failure, List<TaskDTO>> getTasks();
+  TaskEither<Failure, void> editTask({
+    required String id,
+    required bool isFinished,
+  });
 }

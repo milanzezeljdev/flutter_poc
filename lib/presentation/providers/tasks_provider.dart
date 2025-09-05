@@ -23,7 +23,10 @@ class Tasks extends _$Tasks {
 
     state = response.fold(
       (error) => ProviderState.error(error),
-      (tasks) => ProviderState.success(tasks),
+      (tasks) {
+        if (tasks.isEmpty) return ProviderState.empty();
+        return ProviderState.success(tasks);
+      },
     );
   }
 }

@@ -24,4 +24,10 @@ class TaskService {
       (dtoList) => dtoList.map((dto) => TaskModel.fromDTO(dto)).toList(),
     );
   }
+
+  Future<Either<Failure, void>> editTask({
+    required String id,
+    required bool isFinished,
+  }) async =>
+      await _taskRepository.editTask(id: id, isFinished: isFinished).run();
 }

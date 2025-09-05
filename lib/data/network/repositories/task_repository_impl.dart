@@ -34,4 +34,18 @@ class _TaskRepositoryImpl implements TaskRepository {
       ErrorHandler.handle,
     );
   }
+
+  @override
+  TaskEither<Failure, void> editTask({
+    required String id,
+    required bool isFinished,
+  }) =>
+      TaskEither.tryCatch(
+        () async {
+          // final endpoint = "/tasks/$id";
+          // await _dio.patch(endpoint, data: {"done": isFinished});
+          await Future.delayed(Duration(milliseconds: 500));
+        },
+        ErrorHandler.handle,
+      );
 }
